@@ -4,9 +4,19 @@
   --ui-bg: rgba(255,255,255,0.94);
 }
 
+
 /* page baseline */
 html,body{height:100%;margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;}
-body{display:flex;align-items:flex-start;justify-content:center;padding:20px;background:#111;color:#fff;}
+body {
+  display: flex;
+  align-items: center;       /* vertical center */
+  justify-content: center;   /* horizontal center */
+  padding: 20px;
+  background: #111;
+  color: #fff;
+  height: 100vh;             /* make sure body fills screen */
+  margin: 0;
+}
 
 /* Top UI */
 .ui-top{width:var(--viewport-w);margin-bottom:8px;display:flex;justify-content:flex-start}
@@ -14,6 +24,7 @@ body{display:flex;align-items:flex-start;justify-content:center;padding:20px;bac
 
 /* VIEWPORT */
 #viewport {
+
   width: var(--viewport-w);
   height: var(--viewport-h);
   overflow: hidden;
@@ -50,8 +61,8 @@ body{display:flex;align-items:flex-start;justify-content:center;padding:20px;bac
 /* obstacles layer: debug rectangles */
 #obstaclesLayer .obstacle {
   position: absolute;
-  background: rgba(200,40,40,0.35);
-  border: 2px solid rgba(200,40,40,0.6);
+  /* background: rgba(200,40,40,0.35);
+  border: 2px solid rgba(200,40,40,0.6); */
   z-index: 30;
   pointer-events: none;
 }
@@ -75,7 +86,7 @@ body{display:flex;align-items:flex-start;justify-content:center;padding:20px;bac
 }
 
 /* minimap */
-.minimap {
+/* .minimap {
   position: absolute;
   right: calc((100% - var(--viewport-w))/2 + 12px);
   top: calc(20px + 40px);
@@ -86,7 +97,7 @@ body{display:flex;align-items:flex-start;justify-content:center;padding:20px;bac
   box-shadow: 0 6px 24px rgba(0,0,0,0.6);
   z-index: 80;
   image-rendering: pixelated;
-}
+} */
 
 /* Mobile controls */
 .mobile-controls {
