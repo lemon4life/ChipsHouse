@@ -89,7 +89,7 @@ renderObstacleDivs();
 
 // Player world position (center coords)
 let px = MAP_W / 2;
-let py = MAP_H / 2;
+let py = MAP_H ;
 
 // Movement state
 const keys = { ArrowLeft:false, ArrowRight:false, ArrowUp:false, ArrowDown:false };
@@ -128,8 +128,8 @@ function updateCameraAndCenterUI() {
 
   // show/hide center button based on distance to viewport center
   if (centerBtn) {
-    const viewCenterX = 690;
-    const viewCenterY = 290;
+    const viewCenterX = 700;
+    const viewCenterY = 250;
     const dist = Math.hypot(px - viewCenterX, py - viewCenterY);
     if (dist <= INTERACTIVE_RADIUS) centerBtn.classList.remove('hidden');
     else centerBtn.classList.add('hidden');
@@ -144,21 +144,21 @@ const mmCtx = minimap.getContext('2d');
 const MM_SCALE = Math.min(minimap.width / MAP_W, minimap.height / MAP_H);
 
 function drawMinimap() {
-  mmCtx.clearRect(0,0,minimap.width,minimap.height);
-  // background
-  mmCtx.fillStyle = '#222';
-  mmCtx.fillRect(0,0,minimap.width,minimap.height);
+  // mmCtx.clearRect(0,0,minimap.width,minimap.height);
+  // // background
+  // mmCtx.fillStyle = '#222';
+  // mmCtx.fillRect(0,0,minimap.width,minimap.height);
 
   // obstacles
-  mmCtx.fillStyle = '#b33';
-  for (let o of obstacles) {
-    mmCtx.fillRect(o.x * MM_SCALE, o.y * MM_SCALE, o.w*MM_SCALE, o.h*MM_SCALE);
-  }
+  // mmCtx.fillStyle = '#b33';
+  // for (let o of obstacles) {
+  //   mmCtx.fillRect(o.x * MM_SCALE, o.y * MM_SCALE, o.w*MM_SCALE, o.h*MM_SCALE);
+  // }
 
   // player
-  mmCtx.fillStyle = '#ffd700';
+  // mmCtx.fillStyle = '#ffd700';
   mmCtx.beginPath();
-  mmCtx.arc(px * MM_SCALE, py * MM_SCALE, 4, 0, Math.PI*2);
+  // mmCtx.arc(px * MM_SCALE, py * MM_SCALE, 4, 0, Math.PI*2);
   mmCtx.fill();
 }
 
