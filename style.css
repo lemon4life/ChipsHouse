@@ -1,0 +1,124 @@
+:root{
+  --viewport-w: 900px;
+  --viewport-h: 600px;
+  --ui-bg: rgba(255,255,255,0.94);
+}
+
+/* page baseline */
+html,body{height:100%;margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;}
+body{display:flex;align-items:flex-start;justify-content:center;padding:20px;background:#111;color:#fff;}
+
+/* Top UI */
+.ui-top{width:var(--viewport-w);margin-bottom:8px;display:flex;justify-content:flex-start}
+.hint{background:var(--ui-bg);color:#111;padding:6px 10px;border-radius:8px;font-weight:600;}
+
+/* VIEWPORT */
+#viewport {
+  width: var(--viewport-w);
+  height: var(--viewport-h);
+  overflow: hidden;
+  border-radius: 10px;
+  border: 2px solid rgba(255,255,255,0.06);
+  background: #000;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  outline: none;
+}
+
+/* WORLD (big background) */
+#world {
+  position: relative;
+  width: 1024px;   /* adjust to your huge_room.png resolution */
+  height: 1440px;  /* adjust accordingly */
+  background: url('assets/huge_room.png') no-repeat center center;
+  background-size: cover;
+  will-change: transform;
+}
+
+/* Player */
+#player {
+  position: absolute;
+  width: 125px;
+  height: auto;
+  transform: translate(-50%, -50%); /* we place at center of player coords */
+  z-index: 50;
+  pointer-events: none;
+  user-select: none;
+  image-rendering: pixelated;
+}
+
+/* obstacles layer: debug rectangles */
+#obstaclesLayer .obstacle {
+  position: absolute;
+  background: rgba(200,40,40,0.35);
+  border: 2px solid rgba(200,40,40,0.6);
+  z-index: 30;
+  pointer-events: none;
+}
+
+/* CENTER Interact Button (hidden by default) */
+.center-btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  padding: 8px 12px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: none;
+  background: var(--ui-bg);
+  color: #111;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  font-weight: 700;
+}
+
+/* minimap */
+.minimap {
+  position: absolute;
+  right: calc((100% - var(--viewport-w))/2 + 12px);
+  top: calc(20px + 40px);
+  width: 120px;
+  height: 200px;
+  border-radius: 8px;
+  background: rgba(0,0,0,0.6);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.6);
+  z-index: 80;
+  image-rendering: pixelated;
+}
+
+/* Mobile controls */
+.mobile-controls {
+  display: none;
+  position: absolute;
+  left: 20px;
+  bottom: 16px;
+  width: 180px;
+  z-index: 90;
+  gap: 8px;
+  pointer-events: auto;
+}
+.dpad { width: 54px; height: 54px; border-radius: 10px; background: rgba(255,255,255,0.95); color: #111; border: none; font-weight:700; font-size:18px}
+.dpad-row{display:flex;gap:10px;justify-content:center;margin:8px 0}
+.dpad.interact{width:54px;height:54px;border-radius:50%;font-size:20px}
+
+/* show mobile controls on small screens */
+@media (max-width: 700px) {
+  :root{ --viewport-w: 360px; --viewport-h: 620px; }
+  body{padding:10px;}
+  .mobile-controls{display:flex;flex-direction:column;align-items:center;}
+}
+
+/* next scene styles */
+.next-scene{min-height:100vh;display:flex;align-items:center;justify-content:center;flex-direction:column;background:#0b0b0b}
+.show-image-btn{padding:10px 14px;border-radius:8px;border:none;background:var(--ui-bg);color:#111;font-weight:700;cursor:pointer;margin-bottom:12px}
+.back-link{color:var(--ui-bg);text-decoration:none;margin-top:8px;display:inline-block}
+.video-overlay {
+  width: 900px;
+  height: 600px;
+  object-fit: cover; /* keeps proportions and fills the box */
+  border-radius: 10px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+}
+.hidden{display:none}
