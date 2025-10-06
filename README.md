@@ -35,11 +35,10 @@ You can **move the character** around, **interact with the environment**, and ev
 
 | Component | Description |
 |------------|-------------|
-| **Languages** | HTML, CSS, JavaScript (Vanilla) |
+| **Languages** | HTML, CSS, JavaScript |
 | **Frameworks** | None (pure JS for simplicity) |
 | **Tools** | Procreate for pixel and hand-drawn animation |
 | **Game Loop** | Custom rendering loop with `requestAnimationFrame()` |
-| **Audio** | Web Audio API |
 
 ---
 
