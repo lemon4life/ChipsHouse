@@ -3,26 +3,21 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Chip Chip</title>
+  <title>Chip's House</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div id="viewport" tabindex="0">
     <div id="world">
-      <!-- player absolute-positioned inside world -->
       <img id="player" src="assets/idle.gif" alt="player" draggable="false">
-      <!-- obstacle visuals (populated from JS) -->
       <div id="obstaclesLayer"></div>
     </div>
 
-    <!-- CENTER interact button (hidden until player near viewport center) -->
-    <button id="centerBtn" class="center-btn hidden" aria-label="Interact">Turn off</button>
+    <button id="centerBtn" class="center-btn hidden" aria-label="Interact">Turn Off</button>
   </div>
 
-  <!-- Minimap -->
   <canvas id="minimap" width="120" height="200" class="minimap" aria-hidden="true"></canvas>
 
-  <!-- Mobile controls -->
   <div class="mobile-controls" id="mobileControls" aria-hidden="true">
     <button class="dpad up" data-dir="up">▲</button>
     <div class="dpad-row">
@@ -36,5 +31,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
-
