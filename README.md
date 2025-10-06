@@ -1,6 +1,6 @@
 # Chip's House – *"A Little Surprise in the Room"*
 
-![Gameplay Preview](assets/preview.mp4)
+![Gameplay Preview](assets/preview.gif)
 
 > *A cozy little hand-drawn minigame created as a surprise birthday gift — now evolving into a full interactive world.*
 
