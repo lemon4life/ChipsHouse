@@ -1,6 +1,6 @@
 # Chip's House – *"A Little Surprise in the Room"*
 
-![Gameplay Preview](assets/preview.gif)
+![Gameplay Preview](assets/preview.mp4)
 
 > *A cozy little hand-drawn minigame created as a surprise birthday gift — now evolving into a full interactive world.*
 
@@ -14,7 +14,7 @@ It’s a **2D hand-drawn animation-based mini adventure** set in a warm, quiet b
 You can **move the character** around, **interact with the environment**, and even discover a few secrets hidden in plain sight...
 
 > 💡 *Hint: Try clicking the light switch near the bed. There might be a hidden button there!*
-> ![Gameplay Preview](assets/light.gif)
+> ![Gameplay Preview](assets/light.png)
 
 ---
 
